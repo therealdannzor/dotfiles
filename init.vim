@@ -1,6 +1,6 @@
 " Main keybindings
 
-let mapleader = ','                     
+let mapleader = ','
 inoremap <C-s> <esc>:update<cr>            " save
 nnoremap <C-s> :update<cr>
 inoremap <C-d> <esc>:wq!<cr>               " save and exit
@@ -11,21 +11,20 @@ inoremap <A-f> <esc>:NERDTreeToggle<cr>
 nnoremap <A-f> :NERDTreeToggle<cr>
 inoremap <Leader><Leader> <esc>:nohlsearch<cr>
 nnoremap <Leader><Leader> :nohlsearch<cr>
-inoremap <A-b> <esc>:GoBuild<cr>
-nnoremap <A-b> :GoBuild<cr>
+
 inoremap <C-o> <esc>:tabnew<cr>
 nnoremap <C-o> :tabnew<cr>
 inoremap <C-x> <esc>:tabclose<cr>
 nnoremap <C-x> :tabclose<cr>
 
-nnoremap <F4> :grep! "\<<cword>\>" . -r -I --exclude-dir={.git,references} <CR>:copen<CR>
+nnoremap <F4> :GoReferrers<cr>
+nnoremap <A-b> :GoBuild<cr> 
+inoremap <A-b> <esc>:GoBuild<cr>
 
 map <silent> <Leader>lo :lopen<CR>
 map <silent> <Leader>lc :lclose<CR>
 map <silent> <Leader>qo :copen<CR>
 map <silent> <Leader>qc :cclose<CR>
-map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
-
 
 
 " Go highlights
