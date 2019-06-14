@@ -27,6 +27,8 @@ set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set wildmenu " autocomplete
 
+highlight Pmenu ctermbg=gray guibg=gray
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 
 " Material colorscheme settings
 let g:material_theme_style = 'dark'
