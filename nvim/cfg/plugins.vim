@@ -8,6 +8,7 @@ Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive<Paste>
 " General plugins
 Plug 'Shougo/denite.nvim' 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 Plug 'bling/vim-airline'
@@ -36,6 +37,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+
+" Solidity
+Plug 'tomlion/vim-solidity'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
