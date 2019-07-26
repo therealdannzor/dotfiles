@@ -13,4 +13,4 @@ let g:go_list_type = 'quickfix'
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_list_autoclose = 1
 let g:go_gocode_unimported_packages = 1
-
+let g:go_def_mode = "gopls"

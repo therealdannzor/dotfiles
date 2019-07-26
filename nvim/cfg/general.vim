@@ -1,3 +1,4 @@
+
 "----------------------------------------------
 " General settings
 "----------------------------------------------
@@ -26,6 +27,8 @@ set tabstop=2
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set wildmenu " autocomplete
+
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
 highlight Pmenu ctermbg=gray guibg=gray
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
