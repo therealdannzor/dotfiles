@@ -7,15 +7,13 @@ inoremap <C-d> <esc>:wq!<cr>               " save and exit
 nnoremap <C-d> :wq!<cr>
 inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
-inoremap <A-f> <esc>:NERDTreeToggle<cr>
-nnoremap <A-f> :NERDTreeToggle<cr>
+inoremap <C-f> <esc>:NERDTreeToggle<cr>
+nnoremap <C-f> :NERDTreeToggle<cr>
 inoremap <Leader><Leader> <esc>:nohlsearch<cr>
 nnoremap <Leader><Leader> :nohlsearch<cr>
 
-inoremap <C-o> <esc>:tabnew<cr>
-nnoremap <C-o> :tabnew<cr>
-inoremap <C-x> <esc>:tabclose<cr>
-nnoremap <C-x> :tabclose<cr>
+inoremap <C-t> <esc>:tabnew<cr>
+nnoremap <C-t> :tabnew<cr>
 
 nnoremap <F4> :GoReferrers<cr>
 nnoremap <A-b> :GoBuild!<cr>
@@ -32,8 +30,13 @@ map <silent> <Leader>gdc :GoDeclsDir<CR>
 map <silent> <Leader>gtf :GoTestFunc<CR>
 map <silent> <Leader>docs :GoDoc<CR>
 map <silent> <Leader>find :GoDec<CR> 
+map <silent> <Leader>tc :tabclose<CR>
 
 " Locally (local to block) rename a variable
 nmap <Leader>rf "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/g<cr>`x
+
+" Disable some annoying increment/decrement
+map <C-a> <Nop>
+map <C-x> <Nop>
 
 runtime! ./cfg/*
