@@ -2,8 +2,6 @@
 "----------------------------------------------
 " General settings
 "----------------------------------------------
-set autoindent                    " take indent for new line from previous line
-set smartindent                   " enable smart indentation
 set autoread                      " reload file if the file changes on the disk
 set autowrite                     " write when switching buffers
 set autowriteall                  " write on :quit
@@ -21,12 +19,15 @@ set noerrorbells                  " No bells!
 set novisualbell                  " I said, no bells!
 set number                        " show number ruler
 set ruler
-set formatoptions=tcqronj         " set vims text formatting options
-set softtabstop=2
-set tabstop=2
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set wildmenu " autocomplete
+
+"set smartindent                   " enable smart indentation
+"set autoindent                    " take indent for new line from previous line
+"set softtabstop=2
+"set tabstop=2
+"set formatoptions=tcqronj         " set vims text formatting options
 
 set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 

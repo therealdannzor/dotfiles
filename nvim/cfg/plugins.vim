@@ -41,6 +41,10 @@ Plug 'junegunn/fzf.vim'
 " Solidity
 Plug 'tomlion/vim-solidity'
 
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-sleuth'    " Use file indentation, skip further config
+
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
