@@ -1,4 +1,3 @@
-
 "----------------------------------------------
 " General settings
 "----------------------------------------------
@@ -9,7 +8,6 @@ set clipboard=unnamedplus
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
-set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
 set nospell                       " disable spelling
@@ -19,23 +17,29 @@ set noerrorbells                  " No bells!
 set novisualbell                  " I said, no bells!
 set number                        " show number ruler
 set ruler
+set tabstop=4
+set shiftwidth=4
+
+" Let other language specific plugins handle this... (go / js conflicts)
+set autoindent                    
+set formatoptions=tcqronj         
+set noexpandtab
+set shiftround
+set softtabstop=0
+"set cindent
+"set copyindent
+
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set wildmenu " autocomplete
 
-"set smartindent                   " enable smart indentation
-"set autoindent                    " take indent for new line from previous line
-"set softtabstop=2
-"set tabstop=2
-"set formatoptions=tcqronj         " set vims text formatting options
-
-set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
-
 highlight Pmenu ctermbg=gray guibg=gray
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 
-" Material colorscheme settings
-let g:material_theme_style = 'dark'
+" Polyglot
+syntax on
+
+let g:neomake_logfile='/tmp/neomake.log'
 
 " Error and warning signs.
 let g:ale_sign_error = '⤫'
@@ -44,10 +48,11 @@ let g:ale_sign_warning = '⚠'
 " " Enable integration with airline.
 let g:airline#extensions#ale#enabled = 1
 
+
+" JavaScript
+"let g:javascript_plugin_flow = 1
+
 " Misc
-let g:go_auto_sameids = 1
-let g:one_allow_italics = 1
-let g:deoplete#enable_at_startup = 1
 
 if (has("termguicolors"))
 	  set termguicolors
