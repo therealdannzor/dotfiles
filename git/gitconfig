@@ -1,0 +1,25 @@
+[user]
+	name = dkf
+	email = dannzor@outlook.com
+	signingkey = ""
+[credential]
+    helper = osxkeychain
+
+[url "ssh://git@github.com/organisation"]
+        insteadOf = https://github.com/organisation 
+[core]
+	excludesfile = /Users/dkf/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pager]
+	branch = false
+	diff = false
+	log = false
+[commit]
+	gpgsign = true
+[alias]
+	st = status
