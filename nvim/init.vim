@@ -7,15 +7,17 @@ inoremap <C-d> <esc>:wq!<cr>               " save and exit
 nnoremap <C-d> :wq!<cr>
 inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
-inoremap <A-f> <esc>:NERDTreeToggle<cr>
-nnoremap <A-f> :NERDTreeToggle<cr>
+inoremap <C-f> <esc>:NERDTreeToggle<cr>
+nnoremap <C-f> :NERDTreeToggle<cr>
+inoremap <C-p> <esc>:FZF<cr>
+nnoremap <C-p> :FZF<cr>
 inoremap <Leader><Leader> <esc>:nohlsearch<cr>
 nnoremap <Leader><Leader> :nohlsearch<cr>
 
 inoremap <F2> <esc>:tabnew<cr>
 nnoremap <F2> :tabnew<cr>
-inoremap <C-x> <esc>:tabclose<cr>
-nnoremap <C-x> :tabclose<cr>
+inoremap <C-c> <esc>:tabclose<cr>
+nnoremap <C-c> :tabclose<cr>
 
 nnoremap <F4> :GoReferrers<cr>
 nnoremap <A-b> :GoBuild!<cr>
@@ -32,6 +34,7 @@ map <silent> <Leader>gdc :GoDeclsDir<CR>
 map <silent> <Leader>gtf :GoTestFunc<CR>
 map <silent> <Leader>docs :GoDoc<CR>
 map <silent> <Leader>find :GoDec<CR> 
+:map <silent> <F5> :!open %<CR>
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
