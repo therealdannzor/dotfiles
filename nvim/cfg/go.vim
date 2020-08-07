@@ -13,7 +13,10 @@ let g:go_list_type = 'quickfix'
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_list_autoclose = 1
 let g:go_gocode_unimported_packages = 1
-
 "let g:go_auto_sameids = 1
 let g:one_allow_italics = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_gopls_enabled = 1
+
 let g:deoplete#enable_at_startup = 1
