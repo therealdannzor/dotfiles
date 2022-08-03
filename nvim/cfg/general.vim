@@ -18,14 +18,13 @@ set novisualbell                  " I said, no bells!
 set number                        " show number ruler
 set ruler
 set tabstop=4
-set shiftwidth=4
 
 " Let other language specific plugins handle this... (go / js conflicts)
 set autoindent                    
 set formatoptions=tcqronj         
-set noexpandtab
+set expandtab
 set shiftround
-set softtabstop=0
+set softtabstop=1
 "set cindent
 "set copyindent
 
@@ -33,11 +32,15 @@ set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set wildmenu " autocomplete
 
+" enable project specific rc's (cpp lint)
+"set exrc
+"set secure
+
 highlight Pmenu ctermbg=gray guibg=gray
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 
 " Polyglot
-syntax on
+syntax enable
 
 let g:neomake_logfile='/tmp/neomake.log'
 
@@ -48,18 +51,25 @@ let g:ale_sign_warning = '⚠'
 " " Enable integration with airline.
 let g:airline#extensions#ale#enabled = 1
 
+" LSP
+let g:coc_force_debug = 1
 
 " JavaScript
-"let g:javascript_plugin_flow = 1
+let g:javascript_plugin_flow = 1
+let g:syntastic_javascript_checkers = ['eslint']
+autocmd Filetype javascript setlocal shiftwidth=2
+autocmd Filetype solidity setlocal shiftwidth=4
 
 " Misc
 
-if (has("termguicolors"))
-	  set termguicolors
-  endif
+"if (has("termguicolors"))
+"	  set termguicolors
+"endif
 
 function! Refactor()
     call inputsave()
     let @z=input("What do you want to rename '" . @z . "' to? ")
     call inputrestore()
 endfunction
+
+"let g:python_host_prog="/Users/kadanis/Library/Python/3.6/bin/"
