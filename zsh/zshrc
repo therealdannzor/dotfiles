@@ -34,8 +34,7 @@ alias cl++='clang++ -Wall -std=c++11'
 export GO111MODULE=on
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
-export GOROOT="/usr/local/Cellar/go/1.16.5/libexec/"
-export GOTOOLDIR="/usr/local/Cellar/go/1.16.5/libexec/pkg/tool/darwin_amd64"
+export GOROOT="/usr/local/go"
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 ## Android development
