@@ -9,7 +9,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export EDITOR=$(which vim)
-export LESS="-F -X $LESS" # git diff w/o pager for small changes
+export LESS="-F -X -R $LESS" # git diff w/o pager for small changes
 
 export LC_ALL=en_GB.UTF-8
 export CLASSPATH="/Users/$USER/Development/Java/"
