@@ -9,8 +9,8 @@ inoremap <C-q> <esc>:qa!<cr>               " quit discarding changes
 nnoremap <C-q> :qa!<cr>
 inoremap <C-f> <esc>:NERDTreeToggle<cr>
 nnoremap <C-f> :NERDTreeToggle<cr>
-inoremap <C-p> <esc>:FZF<cr>
-nnoremap <C-p> :FZF<cr>
+inoremap <C-k> <esc>:FZF<cr>
+nnoremap <C-k> :FZF<cr>
 inoremap <Leader><Leader> <esc>:nohlsearch<cr>
 nnoremap <Leader><Leader> :nohlsearch<cr>
 
