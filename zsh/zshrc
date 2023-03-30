@@ -39,6 +39,24 @@ docker() {
   fi
 }
 
+# For simple ChatGPT prompts (zsh).
+# Add your API key as `export GPT_API_KEY=YOUR-KEY` without quotes.
+function ask_chatgpt {
+  typeset prompt="${1#*([[:space:]])}"
+
+  # increase `max_tokens` to return longer responses
+  typeset response=$(curl -s -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $GPT_API_KEY" -d "{\"prompt\": \"$prompt\", \"temperature\": 0.5, \"max_tokens\": 50, \"model\": \"text-davinci-002\"}" https://api.openai.com/v1/completions | sed 's/\\n//g')
+
+  if [ "$(echo $response | jq '.choices')" != "[]" ]; then
+	typeset text=$(echo $response | jq -r '.choices[0].text')
+	echo "$text"
+  else
+	local error=$(echo $response | jq -r '.error.message')
+	echo "Error: $error"
+  fi
+}
+
+
 ## Golang
 export GO111MODULE=on
 export GOPATH=$HOME/go
