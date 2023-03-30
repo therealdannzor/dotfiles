@@ -30,6 +30,14 @@ alias e='exa -l --no-user --no-permissions --git'
 alias m='make test'
 alias mc='mvn clean compile assembly:single'
 alias cl++='clang++ -Wall -std=c++11'
+# useful only for Mac OS Silicon M1
+docker() {
+ if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
+  else
+     /usr/local/bin/docker "$@"
+  fi
+}
 
 ## Golang
 export GO111MODULE=on
