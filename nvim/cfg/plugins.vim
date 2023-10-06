@@ -11,7 +11,6 @@ Plug 'TheZoq2/neovim-auto-autoread'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 Plug 'preservim/nerdcommenter'
-"filetype plugin on
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " LSP
 "Plug 'neoclide/coc.nvim', {'commit': '891d1687ac3aa8ae2c5d92cb5cf0bb8c736bf0f1'}
@@ -35,6 +34,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'navarasu/onedark.nvim'
 
 set redrawtime=10000
+
+filetype plugin indent on
 
 " Use homebrew's clangd
 let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
