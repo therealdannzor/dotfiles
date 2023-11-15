@@ -25,6 +25,15 @@ inoremap <A-b> <esc> :GoBuild!<cr>
 nnoremap <A-t> :!make test<cr>
 inoremap <A-t> <esc> :!make test<cr>
 
+" Search for the word under cursor
+nnoremap <Leader>s :Ags<Space><C-R>=expand('<cword>')<CR><CR>
+" Search for the visually selected text
+vnoremap <Leader>s y:Ags<Space><C-R>='"' . escape(@", '"*?()[]{}.') . '"'<CR><CR>
+" Run Ags
+nnoremap <Leader>a :Ags<Space>
+" Quit Ags
+nnoremap <Leader><Leader>a :AgsQuit<CR>
+
 map <silent> <Leader>lo :lopen<CR>
 map <silent> <Leader>lc :lclose<CR>
 map <silent> <Leader>qo :copen<CR>

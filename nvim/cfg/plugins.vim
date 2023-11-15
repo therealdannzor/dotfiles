@@ -9,6 +9,7 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive' " Git
 Plug 'TheZoq2/neovim-auto-autoread'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'gabesoft/vim-ags'
 
 Plug 'preservim/nerdcommenter'
 
@@ -19,7 +20,6 @@ let g:coc_default_semantic_highlight_groups = 0
 
 " Languages
 Plug 'neovim/nvim-lspconfig'
-"Plug 'ycm-core/YouCompleteMe'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc-rls'
 Plug 'TovarishFin/vim-solidity'
