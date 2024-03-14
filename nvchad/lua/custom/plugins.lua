@@ -16,6 +16,10 @@ local plugins = {
     end
   }, 
   {
+    "fatih/vim-go",
+    ft = "go",
+  },
+  {
     "rust-lang/rust.vim",
     ft = "rust",
     init = function()
