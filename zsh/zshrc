@@ -38,6 +38,7 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 # Rust
 export RUSTFMT_CONFIG_PATH="/Users/$USER/.config/rustfmt/rustfmt.toml"
+export PATH=~/.local/share/solana/install/active_release/bin:$PATH
 
 ## Android development
 #export ANDROID_HOME="$HOME/Library/Android/sdk"
