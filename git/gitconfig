@@ -1,14 +1,22 @@
 [user]
 	name = dkf
 	email = dannzor@outlook.com
-	signingkey = ""
+	signingkey = /Users/$USER/.ssh/id_ed25519.pub
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 
+# Enforce SSH
 [url "ssh://git@github.com/organisation"]
-        insteadOf = https://github.com/organisation 
+  insteadOf = https://github.com/organisation
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/
 [core]
-	excludesfile = /Users/dkf/.gitignore_global
+  excludesfile = /Users/$USER/.gitignore_global
+  pager = cat
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -23,3 +31,6 @@
 	gpgsign = true
 [alias]
 	st = status
+[gpg]
+	program = gpg
+	format = ssh
