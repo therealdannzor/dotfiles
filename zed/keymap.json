@@ -15,8 +15,10 @@
   {
     "context": "Editor",
     "bindings": {
-      //"-": "pane::ActivatePrevItem",
-      //"+": "pane::ActivateNextItem",
+      "ctrl-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-up": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-down": ["workspace::ActivatePaneInDirection", "Down"],
       "cmd-]": "pane::GoBack",
       "cmd-[": "pane::GoForward",
       "cmd-1": null,
@@ -27,3 +29,4 @@
     }
   }
 ]
+
